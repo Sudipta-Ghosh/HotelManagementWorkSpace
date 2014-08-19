@@ -20,10 +20,11 @@ public class GenericService<E extends GenericDTO> implements IGenericService {
 	
 	
 	//@Transactional
-	public void save(GenericDTO userGroupTo) {
+	public String save(GenericDTO userGroupTo) {
 		// TODO Auto-generated method stub
-		invokeTransactionContoller.findObjectType(userGroupTo);
+		String outputMessage=invokeTransactionContoller.save(userGroupTo);
 		//userGroupDao.save(userGroupTo);
+		return outputMessage;
 
 	}
 

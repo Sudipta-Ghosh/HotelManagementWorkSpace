@@ -8,11 +8,12 @@ import com.java.hotelMgmt.entity.common.GenericDTO;
 
 public class BusinessDelegate {
 	
-	public void doProcessing(GenericDTO userGroupTo) {
+	public String doSave(GenericDTO genericdto) {
 		// TODO Auto-generated method stub
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		IGenericService objGenericService = (IGenericService)context.getBean("GenericService");
-		objGenericService.save(userGroupTo);
+		String outputMessage=objGenericService.save(genericdto);
+		return outputMessage;
 		
 	}
 

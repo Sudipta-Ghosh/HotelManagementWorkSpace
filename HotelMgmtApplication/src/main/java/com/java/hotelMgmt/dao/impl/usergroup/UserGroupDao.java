@@ -14,10 +14,10 @@ public class UserGroupDao   implements IUserGroupDao {
 
 	 private SessionFactory sessionFactory;
 	
-	public void save(TUserGroup userGroupTo) {
+	public String save(TUserGroup userGroupTo) {
 		// TODO Auto-generated method stub
 		this.sessionFactory.getCurrentSession().save(userGroupTo);
-		
+		return "1 UserGroup Save Successfully";
 	}
 
 

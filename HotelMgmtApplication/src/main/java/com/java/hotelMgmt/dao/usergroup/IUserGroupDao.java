@@ -6,7 +6,7 @@ import com.java.hotelMgmt.entity.common.GenericDTO;
 
 public interface IUserGroupDao {
 	
-	void save(TUserGroup userGroupTo);
+	String save(TUserGroup userGroupTo);
 	void update(TUserGroup userGroupTo);
 	void delete(TUserGroup userGroupTo);
 	TUserGroup findByUserGroupCode(String userGroupTo);

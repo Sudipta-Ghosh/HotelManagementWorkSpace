@@ -11,9 +11,10 @@ public class UserGroupTransactionController {
 	
 	UserGroupDao userGroupDao;
 	@Transactional
-	public void save(TUserGroup userGroupTo) {
+	public String save(TUserGroup userGroupTo) {
 		// TODO Auto-generated method stub
-		userGroupDao.save(userGroupTo);
+		String outputMessage=userGroupDao.save(userGroupTo);
+		return outputMessage;
 
 	}
 	@Autowired

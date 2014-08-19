@@ -10,12 +10,13 @@ public class InvokeTransactionContoller <E extends GenericDTO> {
 	
 	UserGroupTransactionController userGroupTransactionController;
 	
-	public E findObjectType(GenericDTO objDto){
+	public String save(GenericDTO objDto){
+		String outputMessage="";
 		if(objDto instanceof TUserGroup ){
 			
-			userGroupTransactionController.save((TUserGroup) objDto);
+			outputMessage =userGroupTransactionController.save((TUserGroup) objDto);
 		}
-		return null;
+		return outputMessage;
 		
 	}
 	@Autowired
