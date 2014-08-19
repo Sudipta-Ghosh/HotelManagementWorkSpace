@@ -18,28 +18,16 @@
     
     <!-- This bean has been referred fron struts.xml file; So type it correctly; -->
     <!-- Make scope prototype; This is really important. -->
-    <bean name="editEmployeeAction" class="com.howtodoinjava.controller.EditEmployeeAction" scope="prototype">
-	     <property name="employeeManager">
-	        <ref bean="employeeManager"/>
-	     </property>
-    </bean>
+     <bean 
+class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+   
     
     <!-- These beans are injected automatically by spring context -->
-    <bean id="UserGroupDao" class="com.java.hotelMgmt.dao.impl.usergroup.UserGroupDao">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    
-    <bean id="UserGroupService" class="com.java.hotelMgmt.core.service.impl.UserGroupService">
-        <property name="InvokeTransactionContoller" ref="InvokeTransactionContoller"/>
-    </bean>
-    
-     <bean id="InvokeTransactionContoller" class="com.java.hotelMgmt.util.InvokeTransactionContoller">
-        <property name="UserGroupTransactionController" ref="UserGroupTransactionController"/>
-    </bean>
-    
-    <bean id="UserGroupTransactionController" class="com.java.hotelMgmt.transactioncontroller.UserGroupTransactionController">
-        <property name="UserGroupDao" ref="UserGroupDao"/>
-    </bean>
+    <bean id="UserGroupDao" class="com.java.hotelMgmt.dao.impl.usergroup.UserGroupDao"/>
+    <bean id="GenericService" class="com.java.hotelMgmt.core.service.impl.GenericService"/>
+    <bean id="InvokeTransactionContoller" class="com.java.hotelMgmt.util.InvokeTransactionContoller"/>
+    <bean id="UserGroupTransactionController" class="com.java.hotelMgmt.transactioncontroller.UserGroupTransactionController"/>
+       
     
   
     

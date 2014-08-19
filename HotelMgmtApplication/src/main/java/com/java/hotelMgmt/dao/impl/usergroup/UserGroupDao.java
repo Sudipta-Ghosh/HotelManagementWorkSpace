@@ -1,6 +1,7 @@
 package com.java.hotelMgmt.dao.impl.usergroup;
 
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.java.hotelMgmt.dao.usergroup.IUserGroupDao;
@@ -36,7 +37,7 @@ public class UserGroupDao   implements IUserGroupDao {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	@Autowired
 	public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }

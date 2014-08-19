@@ -11,8 +11,8 @@ public class BusinessDelegate {
 	public void doProcessing(GenericDTO userGroupTo) {
 		// TODO Auto-generated method stub
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-		IGenericService objUserGroupService = (IGenericService)context.getBean("UserGroupService");
-		objUserGroupService.save(userGroupTo);
+		IGenericService objGenericService = (IGenericService)context.getBean("GenericService");
+		objGenericService.save(userGroupTo);
 		
 	}
 

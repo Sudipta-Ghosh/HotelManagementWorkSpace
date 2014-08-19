@@ -1,5 +1,6 @@
 package com.java.hotelMgmt.transactioncontroller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.java.hotelMgmt.dao.impl.usergroup.UserGroupDao;
@@ -15,6 +16,7 @@ public class UserGroupTransactionController {
 		userGroupDao.save(userGroupTo);
 
 	}
+	@Autowired
 	public void setUserGroupDao(UserGroupDao userGroupDao) {
 		this.userGroupDao = userGroupDao;
 	}
