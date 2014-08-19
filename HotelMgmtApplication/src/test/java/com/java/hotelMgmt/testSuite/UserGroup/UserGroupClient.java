@@ -2,7 +2,7 @@ package com.java.hotelMgmt.testSuite.UserGroup;
 
 import java.util.Date;
 
-import com.java.hotelMgmt.businessDelegate.BusinessDelegate;
+import com.java.hotelMgmt.core.businessdelegate.BusinessDelegate;
 import com.java.hotelMgmt.dao.impl.usergroup.UserGroupDao;
 import com.java.hotelMgmt.entity.TUserGroup;
 

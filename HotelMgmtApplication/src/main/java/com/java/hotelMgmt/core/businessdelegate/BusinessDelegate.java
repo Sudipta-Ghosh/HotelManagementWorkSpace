@@ -1,10 +1,10 @@
-package com.java.hotelMgmt.businessDelegate;
+package com.java.hotelMgmt.core.businessdelegate;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.java.hotelMgmt.core.service.IGenericService;
 import com.java.hotelMgmt.entity.common.GenericDTO;
-import com.java.hotelMgmt.service.IGenericService;
 
 public class BusinessDelegate {
 	

@@ -9,11 +9,11 @@ import com.java.hotelMgmt.entity.common.GenericDTO;
 
 
 @Repository("UserGroupDao")
-public class UserGroupDao<E extends GenericDTO>   implements IUserGroupDao {
+public class UserGroupDao   implements IUserGroupDao {
 
 	 private SessionFactory sessionFactory;
 	
-	public void save(GenericDTO userGroupTo) {
+	public void save(TUserGroup userGroupTo) {
 		// TODO Auto-generated method stub
 		this.sessionFactory.getCurrentSession().save(userGroupTo);
 		

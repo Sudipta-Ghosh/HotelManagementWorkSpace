@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.java.hotelMgmt.service.impl.UserGroupService;
+import com.java.hotelMgmt.core.service.impl.UserGroupService;
 import com.java.hotelMgmt.entity.TUserGroup;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;

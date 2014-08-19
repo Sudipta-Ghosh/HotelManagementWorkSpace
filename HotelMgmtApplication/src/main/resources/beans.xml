@@ -29,7 +29,15 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     
-    <bean id="UserGroupService" class="com.java.hotelMgmt.service.impl.usergroup.UserGroupService">
+    <bean id="UserGroupService" class="com.java.hotelMgmt.core.service.impl.UserGroupService">
+        <property name="InvokeTransactionContoller" ref="InvokeTransactionContoller"/>
+    </bean>
+    
+     <bean id="InvokeTransactionContoller" class="com.java.hotelMgmt.util.InvokeTransactionContoller">
+        <property name="UserGroupTransactionController" ref="UserGroupTransactionController"/>
+    </bean>
+    
+    <bean id="UserGroupTransactionController" class="com.java.hotelMgmt.transactioncontroller.UserGroupTransactionController">
         <property name="UserGroupDao" ref="UserGroupDao"/>
     </bean>
     

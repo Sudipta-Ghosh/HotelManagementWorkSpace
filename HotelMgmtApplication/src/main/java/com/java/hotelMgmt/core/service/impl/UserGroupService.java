@@ -1,26 +1,28 @@
-package com.java.hotelMgmt.service.impl;
-
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+package com.java.hotelMgmt.core.service.impl;
 
 import com.java.hotelMgmt.entity.common.GenericDTO;
-import com.java.hotelMgmt.service.IGenericService;
-import com.java.hotelMgmt.dao.impl.usergroup.UserGroupDao;
+import com.java.hotelMgmt.util.InvokeTransactionContoller;
 
-@Service("UserGroupBO")
+import com.java.hotelMgmt.core.service.IGenericService;
+
+
 public class UserGroupService<E extends GenericDTO> implements IGenericService {
 
-	UserGroupDao userGroupDao;
-    
+	InvokeTransactionContoller invokeTransactionContoller;
 	
-	public void setUserGroupDao(UserGroupDao userGroupDao) {
-		this.userGroupDao = userGroupDao;
+	
+	public void setInvokeTransactionContoller(
+			InvokeTransactionContoller invokeTransactionContoller) {
+		this.invokeTransactionContoller = invokeTransactionContoller;
 	}
+
 	
-	@Transactional
+	
+	//@Transactional
 	public void save(GenericDTO userGroupTo) {
 		// TODO Auto-generated method stub
-		userGroupDao.save(userGroupTo);
+		invokeTransactionContoller.findObjectType(userGroupTo);
+		//userGroupDao.save(userGroupTo);
 
 	}
 

@@ -1,4 +1,4 @@
-package com.java.hotelMgmt.service;
+package com.java.hotelMgmt.core.service;
 
 import java.io.Serializable;
 
