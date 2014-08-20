@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-import com.java.hotelMgmt.core.service.impl.GenericService;
-import com.java.hotelMgmt.entity.TUserGroup;
+import com.java.hotelMgmt.core.service.usergroup.impl.UserGroupService;
+import com.java.hotelMgmt.dto.TUserGroup;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
 
@@ -22,7 +22,7 @@ private static final long serialVersionUID = 1L;
 		private TUserGroup userGroup;
 		
 		//Employee manager injected by spring context; This is cool !!
-		private GenericService userGroupBO;
+		private UserGroupService userGroupBO;
 		
 		
 		public String listEmployees() {
@@ -33,7 +33,7 @@ private static final long serialVersionUID = 1L;
 		//This method will be called when a employee object is added
 		public String addEmployee() {
 			logger.info("addEmployee method called");
-			userGroupBO.save(userGroup);;
+			//userGroupBO.save(userGroup);;
 			return SUCCESS;
 		}
 		
@@ -50,7 +50,7 @@ private static final long serialVersionUID = 1L;
 		public void setUserGroup(TUserGroup userGroup) {
 			this.userGroup = userGroup;
 		}
-		public void setUserGroupBO(GenericService userGroupBO) {
+		public void setUserGroupBO(UserGroupService userGroupBO) {
 			this.userGroupBO = userGroupBO;
 		}
 		public void prepare() throws Exception {

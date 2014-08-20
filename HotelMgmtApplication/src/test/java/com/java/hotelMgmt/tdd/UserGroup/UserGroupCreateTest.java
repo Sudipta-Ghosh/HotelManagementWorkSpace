@@ -7,7 +7,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.java.hotelMgmt.core.businessdelegate.BusinessDelegate;
-import com.java.hotelMgmt.entity.TUserGroup;
+import com.java.hotelMgmt.dto.TUserGroup;
+import com.java.hotelMgmt.valueObject.usergroup.UserGroupVO;
+import com.java.hotelMgmt.valueObject.util.GenericVO;
 
 public class UserGroupCreateTest {
 	
@@ -23,8 +25,10 @@ public class UserGroupCreateTest {
 		 userGroupTo.setLastUpdatedBy("SUDIPTA");
 		 userGroupTo.setCreationDate(new Date());
 		 userGroupTo.setLastUpdatedDate(new Date());
-		String outputmessage= objBusinessDelegate.doSave(userGroupTo);
-		Assert.assertEquals(outputmessage, "1 UserGroup Save Successfully");
+		 userGroupTo.setAction("saveuserGroup");
+		 userGroupTo.setEvent("Save");
+		 UserGroupVO userGroupVO = (UserGroupVO) objBusinessDelegate.doProcess(userGroupTo);
+		Assert.assertEquals(userGroupVO.getMessage(), "1 UserGroup Save Successfully");
 	 }
 
 }

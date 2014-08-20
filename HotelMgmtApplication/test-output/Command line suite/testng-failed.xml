@@ -3,11 +3,11 @@
 <suite name="Failed suite [Command line suite]">
   <test name="Command line test(failed)">
     <classes>
-      <class name="com.java.hotelMgmt.testSuite.UserGroup.UserGroupCreateTest">
+      <class name="com.java.hotelMgmt.tdd.UserGroup.UserGroupCreateTest">
         <methods>
           <include name="testEvaluateRPNPositive"/>
         </methods>
-      </class> <!-- com.java.hotelMgmt.testSuite.UserGroup.UserGroupCreateTest -->
+      </class> <!-- com.java.hotelMgmt.tdd.UserGroup.UserGroupCreateTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

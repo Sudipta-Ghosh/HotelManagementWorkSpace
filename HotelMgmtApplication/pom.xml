@@ -195,10 +195,16 @@
 	</dependency>
 	
 	<dependency>
-		<groupId>oracle.jdbc.OracleDriver</groupId>
- 		<artifactId>ojdbc6</artifactId>
-  		<version>1.0</version>
-	</dependency>
+			 <groupId>com.oracle</groupId>
+ 			 <artifactId>ojdbc6</artifactId>
+  			 <version>11.2.0</version>
+		</dependency>
+		
+		<dependency>
+	<groupId>commons-logging</groupId>
+	<artifactId>commons-logging</artifactId>
+	<version>1.1.1</version>
+</dependency>
 	
 	
 	<dependency>
@@ -213,11 +219,7 @@
 		   <scope>test</scope>
 	</dependency>
 	
-	<dependency>  
-       <groupId>org.jbehave</groupId>  
-       <artifactId>jbehave-core</artifactId>  
-       <version>3.8</version>  
-     </dependency>  
+ 
             
 	
   </dependencies>
