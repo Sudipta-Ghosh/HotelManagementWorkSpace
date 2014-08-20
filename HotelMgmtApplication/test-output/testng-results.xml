@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="2782" started-at="2014-08-20T18:14:35Z" finished-at="2014-08-20T18:14:38Z">
+  <suite name="Command line suite" duration-ms="4067" started-at="2014-08-20T18:25:48Z" finished-at="2014-08-20T18:25:53Z">
     <groups>
       <group name="UserGroupCreateTest">
         <method signature="UserGroupCreateTest.testEvaluateRPNPositive()[pri:0, instance:com.java.hotelMgmt.tdd.UserGroup.UserGroupCreateTest@1df280b]" name="testEvaluateRPNPositive" class="com.java.hotelMgmt.tdd.UserGroup.UserGroupCreateTest"/>
       </group> <!-- UserGroupCreateTest -->
     </groups>
-    <test name="Command line test" duration-ms="2782" started-at="2014-08-20T18:14:35Z" finished-at="2014-08-20T18:14:38Z">
+    <test name="Command line test" duration-ms="4067" started-at="2014-08-20T18:25:48Z" finished-at="2014-08-20T18:25:53Z">
       <class name="com.java.hotelMgmt.tdd.UserGroup.UserGroupCreateTest">
-        <test-method status="PASS" signature="testEvaluateRPNPositive()[pri:0, instance:com.java.hotelMgmt.tdd.UserGroup.UserGroupCreateTest@1df280b]" name="testEvaluateRPNPositive" duration-ms="2750" started-at="2014-08-20T23:44:35Z" finished-at="2014-08-20T23:44:38Z">
+        <test-method status="PASS" signature="testEvaluateRPNPositive()[pri:0, instance:com.java.hotelMgmt.tdd.UserGroup.UserGroupCreateTest@1df280b]" name="testEvaluateRPNPositive" duration-ms="4041" started-at="2014-08-20T23:55:49Z" finished-at="2014-08-20T23:55:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEvaluateRPNPositive -->
