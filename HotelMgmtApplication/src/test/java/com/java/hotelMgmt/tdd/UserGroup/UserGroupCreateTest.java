@@ -27,6 +27,7 @@ public class UserGroupCreateTest {
 		 userGroupTo.setLastUpdatedDate(new Date());
 		 userGroupTo.setAction("saveuserGroup");
 		 userGroupTo.setEvent("Save");
+		 userGroupTo.setUserGroupAccess("userGroupAccess");
 		 UserGroupVO userGroupVO = (UserGroupVO) objBusinessDelegate.doProcess(userGroupTo);
 		Assert.assertEquals(userGroupVO.getMessage(), "1 UserGroup Save Successfully");
 	 }

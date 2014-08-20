@@ -33,21 +33,23 @@ public class TUserGroup  extends GenericDTO implements java.io.Serializable {
 		)
 	@Column(name = "USER_GROUP_ID", unique = true, nullable = false, precision = 38, scale = 0)
 	private Long   userGroupId;
-	@Column(name = "USER_GROUP_NAME", nullable = false, length = 100)
+	@Column(name = "USER_GROUP_NAME", nullable = false, length = 50)
 	private String userGroupName;
-	@Column(name = "USER_GROUP_DESCRIPTION", length = 250)
+	@Column(name = "USER_GROUP_DESCRIPTION", length = 50)
 	private String userGroupDescription;
-	@Column(name = "USER_GROUP_STATUS", length = 250)
+	@Column(name = "USER_GRP_ACCESS", length = 20)
+	private String userGroupAccess;
+	@Column(name = "USER_GROUP_STATUS", length = 20)
 	private String userGroupStatus;
-	@Column(name = "CREATED_BY", nullable = false, length = 100)
+	@Column(name = "CREATED_BY", nullable = false, length = 50)
 	private String createdBy;
-	@Column(name = "LAST_UPDATED_BY", nullable = false, length = 100)
+	@Column(name = "LAST_UPDATED_BY", nullable = false, length = 50)
 	private String lastUpdatedBy;
 	@Temporal(TemporalType.DATE)
-	@Column(name = "CREATION_DATE",  length = 100)
+	@Column(name = "CREATION_DATE")
 	private Date   creationDate;
 	@Temporal(TemporalType.DATE)
-	@Column(name = "LAST_UPDATED_DATE", length = 100)
+	@Column(name = "LAST_UPDATED_DATE")
 	private Date   lastUpdatedDate;
 	
 	public Long getUserGroupId() {
@@ -97,6 +99,12 @@ public class TUserGroup  extends GenericDTO implements java.io.Serializable {
 	}
 	public void setLastUpdatedDate(Date lastUpdatedDate) {
 		this.lastUpdatedDate = lastUpdatedDate;
+	}
+	public String getUserGroupAccess() {
+		return userGroupAccess;
+	}
+	public void setUserGroupAccess(String userGroupAccess) {
+		this.userGroupAccess = userGroupAccess;
 	}
 
 	
